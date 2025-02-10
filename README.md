@@ -1,6 +1,6 @@
 # cf-ddns.sh
 ## Background:
-This repo intends to update a DNS entry through Cloudflare's API through a simple bash script and accompanying systemd timer & unit file.
+This repo intends to update a DNS entry through Cloudflare's API through a simple bash script and accompanying systemd timer & unit files.
 
 ## Requirements:
 - Cloudflare account & domain.
@@ -19,5 +19,5 @@ This repo intends to update a DNS entry through Cloudflare's API through a simpl
     3. `sudo systemctl start cf-ddns.timer`
 
 ## Resources Used:
- - [Cloudflare's DNS API documentation](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/scan/)
+ - [Cloudflare's DNS API documentation](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/edit/)
  - [Systemd timer documentation](https://documentation.suse.com/smart/systems-management/html/systemd-working-with-timers/index.html)
