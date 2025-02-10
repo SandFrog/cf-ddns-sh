@@ -1,0 +1,13 @@
+[Unit]
+Description=Runs cf-ddns.sh
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=USER
+WorkingDirectory=/home/USER/Documents/cf-ddns-sh
+ExecStart=/home/USER/Documents/cf-ddns-sh/cf-ddns.sh
+
+[Install]
+WantedBy=multi-user.target
