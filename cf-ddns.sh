@@ -7,7 +7,7 @@ DNS_RECORD_ID=
 CLOUDFLARE_API_KEY=
 
 if [[ $ip != $ipfile ]] && [[ $ip ]]; then
-  curl https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$DNS_RECORD_ID \
+  curl -sS https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$DNS_RECORD_ID \
     -X PUT \
     -H 'Content-Type: application/json' \
     -H "Authorization: Bearer $CLOUDFLARE_API_KEY" \
