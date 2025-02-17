@@ -1,14 +1,14 @@
 # cf-ddns.sh
 ## Background:
-This repo intends to update a DNS entry through Cloudflare's API through a simple bash script and accompanying systemd timer & unit files.
+This repo intends to update a DNS entry through Cloudflare's API using a simple bash script and accompanying systemd timer & unit files.
 
 ## Requirements:
 - Cloudflare account & domain.
-- Something running Linux that you want DDNS for.
+- Something running Linux & systemd that you want DDNS for.
 
 ## First time setup:
 1. Find your account [zone ID](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/).
-2. [Create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
+2. Create an [API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
 3. Get your DNS record ID by entering the following command:
     - `curl https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records?name=subdomain.example.com -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"`
 4. Enter the above information into the cf-ddns.sh file alongside the intended subdomain.
