@@ -6,6 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
 User=USER
+LogLevelMax=notice
 WorkingDirectory=/home/USER/Documents/cf-ddns-sh
 ExecStart=/home/USER/Documents/cf-ddns-sh/cf-ddns.sh
 
